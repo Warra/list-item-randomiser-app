@@ -7,9 +7,9 @@ export default class ListItems extends BaseSchema {
     this.schema.createTable(this.tableName, (table) => {
       table.increments('id')
       table.timestamps(true, true)
-      table.string('name')
-      table.dateTime('inactive_at')
-      table.dateTime('live_at')
+      table.string('name').nullable()
+      table.dateTime('inactive_at').nullable()
+      table.dateTime('live_at').nullable()
       table.integer('list_id').unsigned().references('lists.id').onDelete('CASCADE')
     })
   }
