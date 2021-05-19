@@ -12,6 +12,9 @@ export default class List extends BaseModel {
   @column.dateTime({ autoCreate: true, autoUpdate: true })
   public updatedAt: DateTime
 
+  @column()
+  public name: string
+
   @hasMany(() => ListItem)
   public listItems: HasMany<typeof ListItem>
 }

@@ -25,13 +25,13 @@ Route.get('/', async () => {
 })
 
 Route.group(() => {
-  Route.post('', 'ListsController@create')
-  Route.get('', 'ListsController@index')
-  Route.get('/:listId', 'ListsController@index')
-  Route.patch('/:listId', 'ListsController@update')
-  Route.delete('/:listId', 'ListsController@delete')
-
-  Route.post('/:listId/list-item', 'ListItemsController@create')
-  Route.patch('/:listId/list-item/:listItemId', 'ListItemsController@update')
-  Route.delete('/:listId/list-item/:listItemId', 'ListItemsController@delete')
+  Route.post('', 'ListsController.create')
+  Route.get('', 'ListsController.getAll')
+  Route.get('/:listId', 'ListsController.getSingle')
+  Route.patch('/:listId', 'ListsController.update')
+  Route.delete('/:listId', 'ListsController.delete')
+  
+  Route.post('/:listId/list-items', 'ListItemsController.create')
+  Route.patch('/:listId/list-items/:listItemId', 'ListItemsController.update')
+  Route.delete('/:listId/list-items/:listItemId', 'ListItemsController.delete')
 }).prefix('/lists')

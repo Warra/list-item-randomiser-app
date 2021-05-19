@@ -12,6 +12,20 @@ export default class ListItem extends BaseModel {
   @column.dateTime({ autoCreate: true, autoUpdate: true })
   public updatedAt: DateTime
 
-  @belongsTo(() => List)
+  @column()
+  public name: string
+
+  @column()
+  public inactiveAt: DateTime
+
+  @column()
+  public liveAt: DateTime
+
+  @column()
+  public listId: number
+
+  @belongsTo(() => List, {
+    foreignKey: 'listId',
+  })
   public list: BelongsTo<typeof List>
 }
