@@ -1,0 +1,19 @@
+{
+  "name": "app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.11.4",
+    "@material-ui/icons": "^4.11.2",
+    "axios": "^0.21.1",
+    "luxon": "^1.27.0",
+    "next": "10.2.2",
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
+  }
+}
