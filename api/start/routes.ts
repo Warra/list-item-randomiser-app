@@ -30,8 +30,11 @@ Route.group(() => {
   Route.get('/:listId', 'ListsController.getSingle')
   Route.patch('/:listId', 'ListsController.update')
   Route.delete('/:listId', 'ListsController.delete')
-  
+
   Route.post('/:listId/list-items', 'ListItemsController.create')
   Route.patch('/:listId/list-items/:listItemId', 'ListItemsController.update')
   Route.delete('/:listId/list-items/:listItemId', 'ListItemsController.delete')
+
+  Route.get('/:listId/list-items', 'ListItemsController.getAll')
+  Route.get('/:listId/list-items/inactive', 'ListItemsController.inactive')
 }).prefix('/lists')

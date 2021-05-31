@@ -1,6 +1,6 @@
 import { Suspense, useState, useEffect } from "react"
 import { Box, TextField, Button, List, ListItem, ListItemText, IconButton } from "@material-ui/core"
-import { baseApi } from '../base-api'
+import { baseApi } from '../../base-api'
 import EditIcon from "@material-ui/icons/Edit"
 import UndoIcon from "@material-ui/icons/Undo"
 import DeleteIcon from "@material-ui/icons/Delete"
@@ -27,7 +27,6 @@ export default function Lists() {
   }
 
   const handleSubmit = async () => {
-    console.log(editing)
     if (editing.id) {
       await baseApi.patch(`lists/${editing.id}`, {
         name: newList,
